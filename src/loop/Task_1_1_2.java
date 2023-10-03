@@ -14,9 +14,9 @@ public class Task_1_1_2 {
         long max = 9_223_372_036_854_775_806L;
         //ввод значения будет происходить пока пользователь не введет правильное занчение (число)
         do {
-            Scanner scn = new Scanner(System.in);
-            number_str = scn.nextLine();
-            //number_str= args[0];
+            //Scanner scn = new Scanner(System.in);
+            //number_str = scn.nextLine();
+            number_str= args[0];
             char[] array = number_str.toCharArray();
             for (char symbls : array) {
                 result = Character.isDigit(symbls);
