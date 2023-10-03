@@ -1,7 +1,7 @@
 package loop;
 /*
-1.1. Перемножить числа от 1 до числа (включительно) введенного через аргумент к исполняемой программе
-1.1.2.* Используя рекурсию
+1.1. Peremnozhit' chisla ot 1 do chisla (vklyuchitel'no) vvedennogo cherez argument k ispolnyayemoy programme
+1.1.2.* Ispol'zuya rekursiyu
  */
 import java.util.Scanner;
 public class Task_1_1_2 {

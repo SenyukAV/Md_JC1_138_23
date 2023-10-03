@@ -1,10 +1,10 @@
 package loop;
 
 /*
-    1.1. Перемножить числа от 1 до числа (включительно) введенного через аргумент к исполняемой программе.
-     Есть нюанс с переполнением, можно добавить проверки и сообщения пользователю.
-        Пример: Ввели 5, должно получиться в консоли: 1 * 2 * 3 * 4 * 5 = ответ
-    	1.1.1. Используя только цикл
+    1.1. Peremnozhit' chisla ot 1 do chisla (vklyuchitel'no) vvedennogo cherez argument k ispolnyayemoy programme.
+     Yest' nyuans s perepolneniyem, mozhno dobavit' proverki i soobshcheniya pol'zovatelyu.
+        Primer: Vveli 5, dolzhno poluchit'sya v konsoli: 1 * 2 * 3 * 4 * 5 = otvet
+    	1.1.1. Ispol'zuya tol'ko tsikl
  */
 
 import java.util.Scanner;
