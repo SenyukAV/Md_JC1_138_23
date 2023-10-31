@@ -10,13 +10,14 @@ package arrays;
  */
 
 
+import home_work_2.utils.ArraysUtils;
 
 public class ArraysIteration {
 
     public static void main(String[] args) {
-        arrayIteration1(utils.ArraysUtils.arrayFromConsole());
-        arrayIteration2(utils.ArraysUtils.arrayFromConsole());
-        arrayIteration3(utils.ArraysUtils.arrayFromConsole());
+        arrayIteration1(ArraysUtils.arrayFromConsole());
+        arrayIteration2(ArraysUtils.arrayFromConsole());
+        arrayIteration3(ArraysUtils.arrayFromConsole());
 
 
     }

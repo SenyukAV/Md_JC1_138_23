@@ -1,9 +1,9 @@
-package loop;
+package home_work_2;
 /*
 1.1. Peremnozhit' chisla ot 1 do chisla (vklyuchitel'no) vvedennogo cherez argument k ispolnyayemoy programme
 1.1.2.* Ispol'zuya rekursiyu
  */
-import java.util.Scanner;
+
 public class Task_1_1_2 {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package loop;
+package home_work_2;
 
 /*
     1.1. Peremnozhit' chisla ot 1 do chisla (vklyuchitel'no) vvedennogo cherez argument k ispolnyayemoy programme.
@@ -6,8 +6,6 @@ package loop;
         Primer: Vveli 5, dolzhno poluchit'sya v konsoli: 1 * 2 * 3 * 4 * 5 = otvet
     	1.1.1. Ispol'zuya tol'ko tsikl
  */
-
-import java.util.Scanner;
 
 public class Task1 {
     public static void main (String [] args) {

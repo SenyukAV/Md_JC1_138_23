@@ -8,9 +8,11 @@ package arrays;
  от 0 до 99 (использовать класс Random) и сохранён в переменную container.
  */
 
+import home_work_2.utils.ArraysUtils;
+
 public class Task_2_1_2 {
     public static void main (String [] args) {
-        int[] container = utils.ArraysUtils.arrayRandom(3,100);
+        int[] container = ArraysUtils.arrayRandom(3,100);
         for( int array : container) {
             System.out.println(array);
         }

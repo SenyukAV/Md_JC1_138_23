@@ -2,13 +2,14 @@ package home_work_3.calcs.simple;
 
 import home_work_3.calcs.api.ICalculator;
 
-public class CalculatorWithCounterAutoAgregationInterface implements ICalculator  {
+public class CalculatorWithMemory implements ICalculator {
     public ICalculator icalc;
     public double result;
 
+
     // в main сможем использовать любой класс куда имплементирован интерфейс  ICalculator
-    public CalculatorWithCounterAutoAgregationInterface(ICalculator icalc) {
-     this.icalc=icalc;
+    public CalculatorWithMemory(ICalculator icalc) {
+        this.icalc=icalc;
     }
 
     private long countOperation=0;

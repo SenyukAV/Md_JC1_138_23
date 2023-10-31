@@ -1,4 +1,4 @@
-package utils;
+package home_work_2.utils;
 
 /*
 2.1. Создать класс ArraysUtils. В этом классе не должно быть main метода. В этом классе написать следующие методы:
@@ -10,7 +10,6 @@ package utils;
  */
 
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class ArraysUtils {

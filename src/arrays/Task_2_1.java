@@ -8,9 +8,11 @@ package arrays;
  */
 
 
+import home_work_2.utils.ArraysUtils;
+
 public class Task_2_1 {
     public static void main (String [] args) {
-        int[] container = utils.ArraysUtils.arrayFromConsole();
+        int[] container = ArraysUtils.arrayFromConsole();
        for( int array : container) {
            System.out.println(array);
        }

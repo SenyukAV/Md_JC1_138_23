@@ -11,14 +11,16 @@ package arrays;
 		2.4.6. Сумма цифр массива
  */
 
+import home_work_2.utils.ArraysUtils;
+
 public class Task_2_4 {
     public static void main(String [] args) {
-       System.out.println("The sum of even positive elements of the array:" +  sumOfEvenPositiveElementsArray(utils.ArraysUtils.arrayRandom(8,10)));
-       System.out.println("The maximum of the array elements with even indexes:" + maximumArrayElementsWithEvenIndexes (utils.ArraysUtils.arrayRandom(8,10)));
-       arrayElementsLessArithmeticMean(utils.ArraysUtils.arrayRandom(8,10));
-       findTwoSmallestElementsArray(utils.ArraysUtils.arrayRandom(8,10));
-       compressArrayDeletingElementsBelongingInterval(utils.ArraysUtils.arrayRandom(8,10),2,3);
-       System.out.println("The sum of the digits of the array:" +  sumDigitsArray(utils.ArraysUtils.arrayRandom(8,10)));
+       System.out.println("The sum of even positive elements of the array:" +  sumOfEvenPositiveElementsArray(ArraysUtils.arrayRandom(8,10)));
+       System.out.println("The maximum of the array elements with even indexes:" + maximumArrayElementsWithEvenIndexes (ArraysUtils.arrayRandom(8,10)));
+       arrayElementsLessArithmeticMean(ArraysUtils.arrayRandom(8,10));
+       findTwoSmallestElementsArray(ArraysUtils.arrayRandom(8,10));
+       compressArrayDeletingElementsBelongingInterval(ArraysUtils.arrayRandom(8,10),2,3);
+       System.out.println("The sum of the digits of the array:" +  sumDigitsArray(ArraysUtils.arrayRandom(8,10)));
 
     }
 

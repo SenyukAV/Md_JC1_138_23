@@ -1,4 +1,4 @@
-package sort;
+package home_work_2.sort;
 /*
 4.2. Создать класс SortsMain. Все проверки пишутся в main.
 		4.2.1. После каждого теста в консоль вы должны распечатать сообщение формата "[Какой массив был до сортировки] -> [Каким стал массив после сортировки]".
@@ -15,6 +15,9 @@ package sort;
  Вызывая ранее созданный метод arrayFromConsole (ArraysUtils.arrayFromConsole()) получить массив. Отсортировать.
  */
 
+import home_work_2.utils.ArraysUtils;
+import home_work_2.utils.SortsUtils;
+
 public class SortsMain {
     public static void main (String [] args) {
         int [] arrayTest1={1,2,3,4,5,6};
@@ -23,15 +26,15 @@ public class SortsMain {
         int [] arrayTest4={};
         int [] arrayTest5={6,5,4,3,2,1};
 
-        utils.SortsUtils.sort(arrayTest1);
-        utils.SortsUtils.sort(arrayTest2);
-        utils.SortsUtils.sort(arrayTest3);
-        utils.SortsUtils.sort(arrayTest4);
-        utils.SortsUtils.sort(arrayTest5);
+        SortsUtils.sort(arrayTest1);
+        SortsUtils.sort(arrayTest2);
+        SortsUtils.sort(arrayTest3);
+        SortsUtils.sort(arrayTest4);
+        SortsUtils.sort(arrayTest5);
 
-        utils.SortsUtils.sort(utils.ArraysUtils.arrayRandom(8,10));
+        SortsUtils.sort(ArraysUtils.arrayRandom(8,10));
 
-        utils.SortsUtils.sort(utils.ArraysUtils.arrayFromConsole());
+        SortsUtils.sort(ArraysUtils.arrayFromConsole());
 
 
 
