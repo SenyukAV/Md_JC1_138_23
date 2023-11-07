@@ -1,13 +1,15 @@
-package home_work_3.calcs.simple;
+package home_work_3.calcs.additional;
 
+import home_work_3.calcs.additional.CalculatorWithCounterClassic;
 import home_work_3.calcs.api.ICalculator;
 
-public class CalculatorWithCounterAutoAgregation implements ICalculator {
+public class CalculatorWithCounterAutoComposite implements ICalculator {
     public CalculatorWithCounterClassic calc1;
 
-    // используем агригацию, объект CalculatorWithCounterClassic будет создан непосредсенно в main
-    public CalculatorWithCounterAutoAgregation(CalculatorWithCounterClassic calc1) {
-        this.calc1 = calc1;
+    // используем композицию, в конструкторе создаем объект CalculatorWithCounterClassic
+    // не будет объекта  CalculatorWithCounterAutoComposite , сооьвевенно не будет и объект CalculatorWithCounterClassic
+    public CalculatorWithCounterAutoComposite() {
+        this.calc1=new CalculatorWithCounterClassic();
     }
 
     @Override

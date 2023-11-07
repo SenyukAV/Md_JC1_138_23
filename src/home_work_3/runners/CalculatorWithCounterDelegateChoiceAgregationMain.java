@@ -1,6 +1,6 @@
 package home_work_3.runners;
 
-import home_work_3.calcs.simple.CalculatorWithCounterAutoChoiceAgregation;
+import home_work_3.calcs.additional.CalculatorWithCounterAutoChoiceAgregation;
 import home_work_3.calcs.simple.CalculatorWithMathCopy;
 import home_work_3.calcs.simple.CalculatorWithMathExtends;
 import home_work_3.calcs.simple.CalculatorWithOperator;

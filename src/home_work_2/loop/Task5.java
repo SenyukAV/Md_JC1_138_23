@@ -1,4 +1,4 @@
-package home_work_2;
+package home_work_2.loop;
 
 /*
   1.5. Задачи в презентации. На сайте есть пояснения по каждой из этих задач. Все задачи в одном классе, в отдельных методах.
@@ -13,21 +13,26 @@ package home_work_2;
 import java.util.Scanner;
 
 public class Task5 {
+
+  /**
     public static void main(String [] args) {
-        findLargestDigitOfNaturalNumber();
-        probabilityOfRandomEvenNumbers();
-        CountEvenAndOddDigitsOfNumber();
-        fibonacciSequence();
-        PrintSeriesOfNumbersInRangeInIncrements();
-        NumberReversal();
+      //  System.out.println(  PrintSeriesOfNumbersInRangeInIncrements(1,2,5));
+      // System.out.println( findLargestDigitOfNaturalNumber(456789));
+        //probabilityOfRandomEvenNumbers();
+     //   System.out.println(CountEvenAndOddDigitsOfNumber(12345678));
+      //  System.out.println(fibonacciSequence(5));
+        //PrintSeriesOfNumbersInRangeInIncrements();
+        System.out.println( NumberReversal(23456));
 
     }
+  **/
 
     //Найти наибольшую цифру натурального числа
-    public static void findLargestDigitOfNaturalNumber(){
-        System.out.println("Enter a natural number");
-        Scanner scn = new Scanner(System.in);
-        int number=scn.nextInt();
+    public static int findLargestDigitOfNaturalNumber(int a){
+        //System.out.println("Enter a natural number");
+       // Scanner scn = new Scanner(System.in);
+       // int number=scn.nextInt();
+        int number=a;
         String number_string=Integer.toString(number);
         String[] array  =number_string.split("");
         int max=Integer.parseInt(array[0]);
@@ -36,14 +41,16 @@ public class Task5 {
                 max=Integer.parseInt(array[i]);
             }
         }
-        System.out.println("The largest digit of a natural number is "+max);
+        return max;
+        //System.out.println("The largest digit of a natural number is "+max);
     }
 
     //Вероятность четных случайных чисел
 
-    public static void CountEvenAndOddDigitsOfNumber(){
-        Scanner scn = new Scanner(System.in);
-        int number=scn.nextInt();
+    public static int CountEvenAndOddDigitsOfNumber(int a){
+      //  Scanner scn = new Scanner(System.in);
+     //   int number=scn.nextInt();
+        int number=a;
         String number_string=Integer.toString(number);
         String[] array  =number_string.split("");
         int even=0;
@@ -55,8 +62,9 @@ public class Task5 {
                 odd++;
             }
         }
-        System.out.println("The numbers of even digits = "+even);
-        System.out.println("The numbers of odd digits = "+odd);
+        return even;
+      //  System.out.println("The numbers of even digits = "+even);
+    //    System.out.println("The numbers of odd digits = "+odd);
     }
 
     //Посчитать четные и нечетные цифры числа, если создавать ряд рандомных цифр
@@ -84,42 +92,53 @@ public class Task5 {
     }
 
     //Ряд Фибоначчи
-    public static void fibonacciSequence() {
+    public static String fibonacciSequence(int n) {
+        String result="1 1";
         int n0 = 1;
         int n1 = 1;
         int n2;
-        System.out.print(n0+" "+n1+" ");
-        for(int i = 3; i <= 11; i++){
+      //  System.out.print(n0+" "+n1+" ");
+        for(int i = 3; i <= n; i++){
             n2=n0+n1;
-            System.out.print(n2+" ");
+        //    System.out.print(n2+" ");
+            result=result+" " +n2;
             n0=n1;
             n1=n2;
         }
-        System.out.println();
+        return  result;
+       // System.out.println();
     }
 
     //Вывести ряд чисел в диапазоне с шагом
-    public static void PrintSeriesOfNumbersInRangeInIncrements(){
-        Scanner scn=new Scanner(System.in);
-        System.out.println("Input number for start");
-        int number1=scn.nextInt();
-        System.out.println("Input step");
-        int number2=scn.nextInt();
-        System.out.println("Input finish number ");
-        int number3=scn.nextInt();
-        if(!(number2<number1 && number1<number3)) {
-            System.out.println("Input correct numbers");
-        }
+    public static String PrintSeriesOfNumbersInRangeInIncrements(int a,int b,int c){
+      //  Scanner scn=new Scanner(System.in);
+      //  System.out.println("Input number for start");
+        String result="";
+        int number1=a;
+        int number2=b;
+        int number3=c;
+      //  int number1=scn.nextInt();
+      //  System.out.println("Input step");
+     //   int number2=scn.nextInt();
+     //   System.out.println("Input finish number ");
+     //   int number3=scn.nextInt();
+ //       if(!(number2<number1 && number1<number3)) {
+ //           System.out.println("Input correct numbers");
+ //       }
         for (int i=number1;i<=number3;i+=number2){
-            System.out.print(i + " ");
+            //System.out.print(i + " ");
+            result=result+i + " ";
         }
+        return  result;
     }
 
     //Переворот числа
-    public static void NumberReversal(){
-        System.out.println("Input number ");
-        Scanner scn =new Scanner(System.in);
-        int number= scn.nextInt();
+    public static String NumberReversal(int a){
+       // System.out.println("Input number ");
+       // Scanner scn =new Scanner(System.in);
+       // int number= scn.nextInt();
+        String result="";
+        int number=a;
         String str_number=Integer.toString(number);
         String [] array=str_number.split("");
         String [] array_revers=new String[array.length];
@@ -127,8 +146,9 @@ public class Task5 {
             array_revers[i]=array[array.length-i-1];
         }
         for (int m=0;m<array_revers.length;m++){
-            System.out.print(array_revers[m]);
+           result+=array_revers[m];
         }
+        return  result;
     }
 
 

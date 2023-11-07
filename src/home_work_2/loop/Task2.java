@@ -1,4 +1,4 @@
-package home_work_2;
+package home_work_2.loop;
 /*
   1.2. Все цифры из числа введенного через аргумент к исполняемой программе перемножить между собой
    и вывести ход вычислений в консоль. Пользователь обязан ввести целое число.
@@ -10,13 +10,16 @@ package home_work_2;
  */
 
 public class Task2 {
+ /**
     public static void main(String [] args) {
-       String number=args[0];
+     //  String number=args[0];
+        String number="181232375";
 
-        checkNumber(number);
+    System.out.println(checkNumber(number));
     }
+  **/
 
-    public static void checkNumber(String numbers){
+    public static int checkNumber(String numbers){
         int result=1;
         char [] array=numbers.toCharArray();
         for (char num: array) {
@@ -24,24 +27,23 @@ public class Task2 {
             if(num == '.') {
                 System.out.println("");
                 System.out.println("Not an integer entered");
-                return;
+                break;
+               // return;
                 //проверяем, что введено не  число
             } else if(!(Character.isDigit(num))) {
                 System.out.println("");
                 System.out.println("Not a number entered");
-                return;
+                break;
+                //return;
             } else {
                 //получаем необходимый результат по условию
                 result=result*(Character.getNumericValue(num));
-                if (num==array[array.length-1]){
-                    System.out.print(num);
-                } else {
-                    System.out.print(num+"*");
-                }
+
             }
 
         }
-        System.out.println("=" + result);
+        return result;
+       // System.out.println("=" + result);
     }
 
 

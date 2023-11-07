@@ -1,4 +1,4 @@
-package arrays;
+package home_work_2.arrays;
 
 /*
 

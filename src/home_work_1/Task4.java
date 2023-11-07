@@ -31,78 +31,80 @@ public class Task4 {
 
     }
 
-    public static void oddOrEven(int a) {
+    public static String  oddOrEven(int a) {
         if (a % 2 == 0) {
-            System.out.println("Number " + a + " is even");
+            return  "Even";
+           // System.out.println("Number " + a + " is even");
         } else {
-            System.out.println("Number is odd");
+            return  "Odd";
+            //System.out.println("Number is odd");
         }
 
 
     }
 
-    public static void findMiddleNumber(int a, int b, int c) {
+    public static int findMiddleNumber(int a, int b, int c) {
         if ((b > a) && (b < c)) {
-            System.out.println("Nubner " + b + " is midlle number");
+            return b;
+            //System.out.println("Nubner " + b + " is midlle number");
         } else if ((c > a) && (c < b)) {
-            System.out.println("Nubner " + c + " is midlle number");
-        } else if ((a > b) && (a < c)) {
-            System.out.println("Nubner " + a + " is midlle number");
-        } else {
-            System.out.println("The problem with determining the necessary condition with the middle number");
-            ;
-        }
+           // System.out.println("Nubner " + c + " is midlle number");
+            return c;
+        } else
+            return  a;
+           // System.out.println("Nubner " + a + " is midlle number");
+
 
     }
 
-    public static void divisibilityOfNumber(int a, int b) {
+    public static boolean divisibilityOfNumber(int a, int b) {
         if (a % b == 0) {
-            System.out.println("The divisibility of  numbers " + a + " and " + b + " exists");
+            return true;
+           // System.out.println("The divisibility of  numbers " + a + " and " + b + " exists");
         } else {
-            System.out.println("The divisibility of  numbers " + a + " and " + b + " don't exists");
+            return false;
+            //System.out.println("The divisibility of  numbers " + a + " and " + b + " don't exists");
         }
     }
 
-    public static void convecotrKbyteTobyte(double a) {
-        if (a > 0) {
-            double result = a * 1024.0;
-            System.out.println(a + " Kbyty = " + result + " byte");
-        } else {
-            System.out.println("Incorrect parameter");
-        }
+    public static double convecotrKbyteTobyte(double a) {
+         return a * 1024.0;
+            // System.out.println(a + " Kbyty = " + result + " byte");
+
 
     }
 
-    public static void convecotrByteToKbyte(double a) {
-        if (a > 0) {
-            double result = a / 1024;
-            System.out.println(a + " byty = " + result + " Kbyte");
-        } else {
-            System.out.println("Incorrect parameter");
-        }
+    public static double convecotrByteToKbyte(double a) {
+
+           return  a / 1024;
 
     }
 
-    public static  void  defineSymbol(char chr){
+    public static  Boolean  defineSymbol(char chr){
         boolean result=Character.isAlphabetic(chr);
         if (result) {
-            System.out.println("Symbol " + chr + " is alphabetic ");
+            return  true;
+            //System.out.println("Symbol " + chr + " is alphabetic ");
         } else  {
-            System.out.println("Symbol " + chr + " is not alphabetic ");
+            return  false;
+            //System.out.println("Symbol " + chr + " is not alphabetic ");
         }
     }
 
-    public static void  definitionOfLeapYear(int a){
+    public static boolean  definitionOfLeapYear(int a){
         if (a>1584) {
             if ((a%400==0) || ((a%4==0)&&(a%100!=0))) {
-                System.out.println("The year" + a + " is leap year");
+               return true;
+                // System.out.println("The year" + a + " is leap year");
             }
             else {
-                System.out.println("The year is  not leap year");
+                return  false;
+              //  System.out.println("The year is  not leap year");
             }
 
         } else {
-            System.out.println("The year before the leap year was created");
+            return  false;
+           // System.out.println("The year before the leap year was created");
         }
     }
 

@@ -1,4 +1,4 @@
-package home_work_2;
+package home_work_2.loop;
 
 /*
 
@@ -12,27 +12,34 @@ package home_work_2;
 import java.util.Scanner;
 
 public class Task3 {
+
+ /**
     public static void main(String [] args) {
-        Scanner scn= new Scanner(System.in);
-        System.out.println("The number that will be squared ");
-        String number1=scn.nextLine();
-        System.out.println("The square of the number");
-        String number2=scn.nextLine();
-        squared(number1,number2);
+       // Scanner scn= new Scanner(System.in);
+       // System.out.println("The number that will be squared ");
+       // String number1=scn.nextLine();
+      //  System.out.println("The square of the number");
+      //  String number2=scn.nextLine();
+        System.out.println(squared("7.5","2"));
     }
 
-    public static void squared(String number1,String number2) {
+  **/
+
+    public static String squared(String number1,String number2) {
         //выполянем проверки, что введеные числа соответвуют условию используя методы для проверки
         if (!(check1(number1))) {
-            System.out.println("The number that will be squared is incorrect");
+           return "The number that will be squared is incorrect";
+            // System.out.println("The number that will be squared is incorrect");
         } else if (!(check2(number2))) {
-            System.out.println("The square of the number is incorrect");
+            return "The square of the number is incorrect";
+           // System.out.println("The square of the number is incorrect");
         } else {
             double squaredFinal = Double.parseDouble(number1);
             for (int i = 0; i < Integer.parseInt(number2) - 1; i++) {
                 squaredFinal = squaredFinal * Double.parseDouble(number1);
             }
-            System.out.println("Result is "+squaredFinal);
+            return  String.valueOf(squaredFinal);
+            //System.out.println("Result is "+squaredFinal);
         }
     }
 

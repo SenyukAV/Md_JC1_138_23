@@ -1,6 +1,9 @@
-package home_work_3.calcs.simple;
+package home_work_3.calcs.additional;
 
 import home_work_3.calcs.api.ICalculator;
+import home_work_3.calcs.simple.CalculatorWithMathCopy;
+import home_work_3.calcs.simple.CalculatorWithMathExtends;
+import home_work_3.calcs.simple.CalculatorWithOperator;
 
 public class CalculatorWithCounterAutoChoiceAgregation implements ICalculator {
     public CalculatorWithOperator calc1;

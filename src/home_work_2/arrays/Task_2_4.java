@@ -1,4 +1,4 @@
-package arrays;
+package home_work_2.arrays;
 
 /*
 2.4 Задачи в презентации. На сайте есть пояснения по каждой из этих задач. Все задачи в одном классе, в отдельных методах.
@@ -15,12 +15,15 @@ import home_work_2.utils.ArraysUtils;
 
 public class Task_2_4 {
     public static void main(String [] args) {
-       System.out.println("The sum of even positive elements of the array:" +  sumOfEvenPositiveElementsArray(ArraysUtils.arrayRandom(8,10)));
-       System.out.println("The maximum of the array elements with even indexes:" + maximumArrayElementsWithEvenIndexes (ArraysUtils.arrayRandom(8,10)));
-       arrayElementsLessArithmeticMean(ArraysUtils.arrayRandom(8,10));
-       findTwoSmallestElementsArray(ArraysUtils.arrayRandom(8,10));
-       compressArrayDeletingElementsBelongingInterval(ArraysUtils.arrayRandom(8,10),2,3);
-       System.out.println("The sum of the digits of the array:" +  sumDigitsArray(ArraysUtils.arrayRandom(8,10)));
+    //    arrayElementsLessArithmeticMean(new int[] {1,2,3,4});
+     //  System.out.println("The sum of even positive elements of the array:" +  sumOfEvenPositiveElementsArray(ArraysUtils.arrayRandom(8,10)));
+     //  System.out.println("The maximum of the array elements with even indexes:" + maximumArrayElementsWithEvenIndexes (ArraysUtils.arrayRandom(8,10)));
+   for (int elm :  compressArrayDeletingElementsBelongingInterval(new int[]{0,1,2,3,4,5},2,3)){
+       System.out.println(elm);
+        }
+     //  findTwoSmallestElementsArray(ArraysUtils.arrayRandom(8,10));
+      compressArrayDeletingElementsBelongingInterval(new int[]{0,1,2,3,4,5},2,3);
+     //  System.out.println("The sum of the digits of the array:" +  sumDigitsArray(ArraysUtils.arrayRandom(8,10)));
 
     }
 
@@ -48,41 +51,65 @@ public class Task_2_4 {
     }
 
     //Элементы массива, которые меньше среднего арифметического
-    public static void arrayElementsLessArithmeticMean(int [] array) {
-        int sum_up=0;
+    public static int[] arrayElementsLessArithmeticMean(int [] array) {
+        double sum_up=0;
+        int k =0;
         for (int i=0;i<array.length;i++){
-            sum_up=sum_up+array[0];
+            sum_up=sum_up+array[i];
         }
-        int average=sum_up/array.length;
-        System.out.println("Array elements that are less than the arithmetic mean :");
+        double average=sum_up/array.length;
+
+      //  System.out.println("Array elements that are less than the arithmetic mean :");
         for (int n=0;n<array.length;n++){
             if(array[n]<average){
-                System.out.println(array[n]);
+                k=k+1;
+               // System.out.println(array[n]);
             }
         }
+
+        int [] array1= new int [k];
+        k=0;
+        for (int n=0;n<array.length;n++){
+            if(array[n]<average){
+
+                array1[k]=array[n];
+                k++;
+                // System.out.println(array[n]);
+            }
+        }
+        return  array1;
+
+
     }
 
     //Найти два наименьших (минимальных) элемента массива
-    public static void findTwoSmallestElementsArray(int [] array) {
-        int min=array[0];
-        int min2=array[0];
-        for (int i=0;i<array.length;i++){
-            if(min>array[i]){
-                min=array[i];
+    public static int[] findTwoSmallestElementsArray(int [] arr) {
+        int n = arr.length;
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
             }
         }
-        System.out.println("The first smallest number is  " + min);
-        for(int n=0;n<array.length;n++){
-            if((min2>array[n])&&(array[n]!=min)){
-                min2=array[n];
+       int min2 = Integer.MAX_VALUE;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] < min2
+                    && arr[i] > min) {
+               min2 = arr[i];
             }
         }
-        System.out.println("The first smallest number is  " +min2);
 
+        int[] arrayResult = new int[]{min, min2};
+
+        return arrayResult;
     }
 
+
+
+
+
     //Сжать массив, удалив элементы, принадлежащие интервалу
-     public static void compressArrayDeletingElementsBelongingInterval (int [] array, int n,int m) {
+     public static int[] compressArrayDeletingElementsBelongingInterval (int [] array, int n,int m) {
         int k=0;
         for (int i=0;i<array.length;i++) {
             if (array[i] < n || array[i] > m) {
@@ -93,11 +120,12 @@ public class Task_2_4 {
             for (int r=k;r<array.length;r++){
                 array[r]=0;
             }
+            return array;
 
-        System.out.println("Compress the array by deleting the elements belonging to the interval");
-        for (int ar: array){
-            System.out.println(ar);
-        }
+    //    System.out.println("Compress the array by deleting the elements belonging to the interval");
+     //   for (int ar: array){
+    //        System.out.println(ar);
+    //    }
     }
 
     //Сумма цифр массива

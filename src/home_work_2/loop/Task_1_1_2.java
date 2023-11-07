@@ -1,4 +1,4 @@
-package home_work_2;
+package home_work_2.loop;
 /*
 1.1. Peremnozhit' chisla ot 1 do chisla (vklyuchitel'no) vvedennogo cherez argument k ispolnyayemoy programme
 1.1.2.* Ispol'zuya rekursiyu

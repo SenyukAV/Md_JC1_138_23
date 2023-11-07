@@ -2,11 +2,11 @@ package home_work_1;
 
 public class Task8 {
     public static void main (String [] args) {
-        toBin(42);
+    System.out.println(toBin(42));
 
     }
 
-    public static void toBin(int n) {
+    public static String toBin(int n) {
         int m;
         String str="";
         while (n!=0){
@@ -14,7 +14,7 @@ public class Task8 {
             str=m+str;
             n=n/2;
         }
-        System.out.println(str);
+       return  str;
 
 
     }

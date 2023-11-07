@@ -1,4 +1,4 @@
-package arrays;
+package home_work_2.arrays;
 
 /*
 2.2 Создать класс ArraysIteration. В этом классе написать перебор (итерирование) массива при помощи do....while, while, for, foreach. Вызывая ранее созданный метод

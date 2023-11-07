@@ -50,7 +50,7 @@ public class CalculatorWithOperator implements ICalculator {
 
     //Получение корня числа (возможен ввод дробных числе)
    public double  sqrt(double a) {
-        double res=sqrt(a);
+        double res=Math.sqrt(a);
         return res;
 
     }
