@@ -3,8 +3,8 @@ package home_work_2.utils;
 public class SortsUtils {
 
 
-    public static void sort(int[] arr) {
-        showArray(arr);
+    public static int[] sort(int[] arr) {
+        //showArray(arr);
         for (int i = 0; i < arr.length - 1; i++) {
             for(int j = 0; j < arr.length - i - 1; j++) {
                 if(arr[j + 1] < arr[j]) {
@@ -14,11 +14,11 @@ public class SortsUtils {
                 }
             }
         }
-        showArray(arr);
+        return arr;
     }
 
-    public  static void shake(int[] array) {
-        showArray(array);
+    public  static int[] shake(int[] array) {
+       // showArray(array);
         boolean exchanged;
         do {
             exchanged= false;
@@ -44,7 +44,8 @@ public class SortsUtils {
                 }
             }
         } while (exchanged);
-        showArray(array);
+       // showArray(array);
+        return array;
 
     }
 

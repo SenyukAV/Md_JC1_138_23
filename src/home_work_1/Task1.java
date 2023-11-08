@@ -1,7 +1,5 @@
 package home_work_1;
 
-import java.util.Scanner;
-
 import static java.lang.Integer.*;
 
 public class Task1 {

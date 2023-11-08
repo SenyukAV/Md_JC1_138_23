@@ -1,4 +1,6 @@
-# Project exclude paths
-/out/
-/.idea/
-untitled.iml
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
