@@ -295,6 +295,17 @@ public class DataGeneration  {
         return "Операция:  sort2. Заняла" + Long.toString(resultTime1) +"мс";
     }
 
+    public String  sort3(Collection collection) {
+
+        long startTime1=System.currentTimeMillis();
+        TreeSet<Person> people = new TreeSet((new NickComparator().thenComparing(new PasswordComparator())));
+        people.addAll(collection);
+        long endTime1=System.currentTimeMillis();
+        long resultTime1=endTime1-startTime1;
+
+        return "Операция:  sort3. Заняла" + Long.toString(resultTime1) +"мс";
+    }
+
 
     }
 

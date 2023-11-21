@@ -75,6 +75,8 @@ public class Main {
 
         System.out.println(dg.sort2(arrayListEntity1));
         System.out.println(dg.sort2(linkedListEntity1));
+        System.out.println(dg.sort3(arrayListEntity));
+        System.out.println(dg.sort3(linkedListEntity));
 
 
         /**
