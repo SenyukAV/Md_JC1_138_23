@@ -3,11 +3,8 @@ package home_work_5;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 import java.util.Comparator;
-import java.util.Iterator;
 
 
 public class DataGeneration  {
@@ -277,6 +274,15 @@ public class DataGeneration  {
     }
 
 
+    public String  sort1( List list, Comparator comparator) {
+        long startTime1=System.currentTimeMillis();
+        Collections.sort(list, comparator);
+        long endTime1=System.currentTimeMillis();
+        long resultTime1=endTime1-startTime1;
+
+        return "Операция:  sort1. Заняла" + Long.toString(resultTime1) +"мс";
+
+    }
 
 
     }

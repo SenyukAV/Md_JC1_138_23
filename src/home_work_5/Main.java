@@ -47,6 +47,24 @@ public class Main {
         System.out.println(  dg.getTimeAdd(hashSetEntity,p,100000));
         System.out.println(  dg.getTimeAdd(hashSetEntity1,a,100000));
 
+        /**
+         * Сортировка коллекций с замером скорости
+         * @param1 коллекция
+         * @param2 кампоратор
+         *
+         */
+
+        System.out.println(dg.sort1((List) arrayListEntity1,new AgeComparator()));
+        System.out.println( dg.sort1((List) arrayListEntity1,new NickComparator1()));
+        System.out.println(dg.sort1((List) arrayListEntity,new NameComparator()));
+        System.out.println(dg.sort1((List) arrayListEntity,new PasswordComparator()));
+        System.out.println(dg.sort1((List) arrayListEntity,new NickComparator()));
+
+        System.out.println(dg.sort1((List) linkedListEntity1,new AgeComparator()));
+        System.out.println( dg.sort1((List) linkedListEntity1,new NickComparator1()));
+        System.out.println(dg.sort1((List) linkedListEntity,new NameComparator()));
+        System.out.println(dg.sort1((List) linkedListEntity,new PasswordComparator()));
+        System.out.println(dg.sort1((List) linkedListEntity,new NickComparator()));
 
 
         /**

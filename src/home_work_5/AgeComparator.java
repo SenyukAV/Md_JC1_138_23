@@ -1,8 +1,9 @@
 package home_work_5;
+import java.util.Comparator;
+public class AgeComparator implements Comparator<Animal> {
 
-public class AgeComparator implements Comparator<Entity> {
-
-    public int compare(Entity x, Entity y){
+    @Override
+    public int compare(Animal x, Animal y){
 
         if(x.getAge()> y.getAge())
             return 1;
