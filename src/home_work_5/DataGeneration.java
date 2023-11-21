@@ -287,8 +287,8 @@ public class DataGeneration  {
     public String  sort2 (Collection collection) {
 
         long startTime1=System.currentTimeMillis();
-        TreeSet<Person> people = new TreeSet(new NickComparator1().thenComparing(new AgeComparator()));
-        people.addAll(collection);
+        TreeSet<Animal> animals = new TreeSet(new NickComparator1().thenComparing(new AgeComparator()));
+        animals.addAll(collection);
         long endTime1=System.currentTimeMillis();
         long resultTime1=endTime1-startTime1;
 
