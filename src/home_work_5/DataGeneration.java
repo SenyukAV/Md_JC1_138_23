@@ -10,19 +10,38 @@ import java.util.Comparator;
 public class DataGeneration  {
 
     /**
-     *
+     * массив символов из цифр и букв латинского алфавита
+     * Нужно что бы генерировать рандомную строку (не важно из чего состоит)
      */
 
     private String[] AlphabetWithDigits = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9","a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 
+    /**
+     * массив букв руссого алфавита алфавита
+     * Нужно что бы генерировать рандомную строку (состоящую из русских букв)
+     */
     private String[] AlphabetRus ={ "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"};
+    /**
+     * массив имен
+     * Нужно что бы генерировать рандомное имя (настоящее имя)
+     */
 
     private String[] NameRus={"Иван","Петр","Михаил","Олег","Геннадий","Александр","Павел","Сергей","Виктор","Игорь"};
 
+    /**
+     * массив кличек
+     * Нужно что бы генерировать рандомное рандомное имя/псевданим
+     */
     private String[] NickRus={"Геракл","Аид","Зевс","Аполлон","Дионис","Гермес","Песейдон","Арес","Гефест","Афина"};
 
+    /**
+     * путь к файлу с именами
+          */
     private String path;
 
+    /**
+     * путь к файлу с кличками
+     */
     private String path1;
 
     public String getPath() {
@@ -51,6 +70,12 @@ public class DataGeneration  {
         return AlphabetRus;
     }
 
+    /**
+     * метод генерации рандомного числа
+     * @param a  минимальное число рандома
+     * @param b  максимальное число рандома
+     * @return  рандомное чилсо
+     */
     public int generateRandomNumber(int a, int b){
 
         int random_number= a + (int) (Math.random() * b);
@@ -58,6 +83,13 @@ public class DataGeneration  {
 
     }
 
+    /**
+     * метод генерации рандомного имена из массива
+     *
+     * @param person ссылка на объект
+     * @param array массив имен
+     * @return  имя
+     */
     public Person generateRandomName(Person person,String[] array) {
         int countOfName=generateRandomNumber(0,array.length);
         person.setName(array[countOfName]);
@@ -65,6 +97,13 @@ public class DataGeneration  {
         return person;
 
     }
+    /**
+     * метод генерации рандомного клички из массива
+     *
+     * @param person ссылка на объект
+     * @param array массив имен
+     * @return  кличка для Animal
+     */
 
     public Animal generateRandomNick(Animal animal,String[] array) {
         int countOfName=generateRandomNumber(0,array.length);
@@ -74,7 +113,14 @@ public class DataGeneration  {
 
     }
 
-    //
+    /**
+     * метод генерации рандомного набора символа для имени
+     *
+     * @param person ссылка на объект
+     * @param array массив
+     * @param a  b  - длина слова
+     * @return  имя
+     */
     public Person generateRandomNameRandom(Person person,String[]array,int a,int b){
 
         int countOfWord=generateRandomNumber(a,b);
@@ -90,6 +136,14 @@ public class DataGeneration  {
         return person;
     }
 
+    /**
+     * метод генерации рандомного набора символа для клички
+     *
+     * @param person ссылка на объект
+     * @param array массив
+     * @param a  b  - длина слова
+     * @return  кличка
+     */
     public Animal generateRandomNickRandom(Animal animal,String[]array,int a,int b){
 
         int countOfWord=generateRandomNumber(a,b);
@@ -105,6 +159,14 @@ public class DataGeneration  {
         return animal;
     }
 
+    /**
+     * метод генерации рандомного набора символа для псевдонима
+     *
+     * @param person ссылка на объект
+     * @param array массив
+     * @param a  b  - длина слова
+     * @return  псевдоним
+     */
     public Person generateRandomNickRandom(Person person,String[]array,int a,int b){
 
         int countOfWord=generateRandomNumber(a,b);
@@ -119,6 +181,14 @@ public class DataGeneration  {
         person.setNick(resultName);
         return person;
     }
+    /**
+     * метод генерации рандомного набора символа для пароля
+     *
+     * @param person ссылка на объект
+     * @param array массив
+     * @param a  b  - длина слова
+     * @return  пароль
+     */
 
     public Person generateRandomPasswordRandom(Person person,String[]array,int a,int b){
 
@@ -135,7 +205,11 @@ public class DataGeneration  {
         return person;
     }
 
-
+    /**
+     * метод для опредедления количества сторк для возможности взять рандомную страку из файла
+     * @param path - путь к файлу
+     * @return  количества сторк
+     */
 
     public int countLinefile(String path) {
         int count=0;
@@ -156,6 +230,12 @@ public class DataGeneration  {
         return count;
     }
 
+    /**
+     * метод для опредедления рандомного имени из файла на основании номера рандомной страку из файла
+     * @param p ссылка на объект
+     * @param path - путь к файлу
+     * @return  ссылка на объект
+     */
     public Person generateRandomNameFromFile(Person p,String path) {
         int count1=1;
         int count2=generateRandomNumber(1,countLinefile(path));
@@ -187,6 +267,13 @@ public class DataGeneration  {
         return "{" + "nick= " + animal.getNick() + ',' + "age= " + animal.getAge() +  '}';
     }
 
+    /**
+     * метод для для наполнения коллекции для Person
+     * @param p ссылка на объект
+     * @param path - путь к файлу
+     * @param n  коллечество добавленых объектов в калецию
+     * @return  коллекцию
+     */
     public  Collection addCollection(Collection collection,Person person,int n) {
         for (int i=0;i<n;i++) {
         collection.add(new Person(this.generateRandomNickRandom(person,this.getAlphabetWithDigits(),5, 10 ).getNick(),this.generateRandomPasswordRandom(person,this.getAlphabetWithDigits(), person.getMinPoinPassword(), person.getMaxPoinPassword() ).getPassword(),this.generateRandomNameRandom(person,this.getAlphabetWithDigits(),5, 10 ).getName()));
@@ -194,12 +281,28 @@ public class DataGeneration  {
         return collection;
     }
 
+    /**
+     * метод для для наполнения коллекции для Animal
+     * @param p ссылка на объект
+     * @param path - путь к файлу
+     * @param n  коллечество добавленых объектов в калецию
+     * @return  коллекцию
+     */
+
     public  Collection addCollection(Collection collection,Animal animal,int n) {
         for (int i=0;i<n;i++) {
             collection.add(new Animal(this.generateRandomNickRandom(animal,this.getAlphabetWithDigits(),5, 10 ).getNick(),this.generateRandomNumber(animal.getMinPoinAge(),animal.getMaxPoinAge())));
         }
         return collection;
     }
+
+    /**
+     * метод для определения времени наполнения коллекции
+     * @param p ссылка на объект
+     * @param path - путь к файлу
+     * @param n  коллечество добавленых объектов в калецию
+     * @return  инофрмация по времени
+     */
 
     public String getTimeAdd(Collection collection,Person person,int n) {
         long startTime1=System.currentTimeMillis();
@@ -211,6 +314,11 @@ public class DataGeneration  {
 
     }
 
+    /**
+     * метод для определения времени наполнения коллекции
+     * @return  инофрмация по времени
+     */
+
     public String getTimeAdd(Collection collection,Animal animal,int n) {
         long startTime1=System.currentTimeMillis();
         addCollection( collection, animal, n);
@@ -220,6 +328,11 @@ public class DataGeneration  {
         return "Операция:  addCollection. Заняла " + Long.toString(resultTime1) +" мс";
 
     }
+
+    /**
+     * метод для итерации коллекции с помощью Iterator
+     * @return  инофрмация по времени
+     */
 
     public String iteratorIteratorTime(Collection collection) {
         long startTime1=System.currentTimeMillis();
@@ -234,6 +347,10 @@ public class DataGeneration  {
 
     }
 
+    /**
+     * метод для замера времени  итерации коллекции с помощью Iterator
+     * @return  инофрмация по времени
+     */
     public String iteratorIteratorTime1(Collection collection) {
         long startTime1=System.currentTimeMillis();
         Iterator<Animal> iter= collection.iterator();
@@ -247,6 +364,10 @@ public class DataGeneration  {
 
     }
 
+    /**
+     * метод для замера времени  итерации коллекции с помощью for
+     * @return  инофрмация по времени
+     */
     public String iteratorTimeFor(ArrayList collection) {
         long startTime1=System.currentTimeMillis();
         for (int i=0;i<collection.size();i++){
@@ -259,6 +380,10 @@ public class DataGeneration  {
 
     }
 
+    /**
+     * метод для замера времени по удалению коллекции с помощью Iterator
+     * @return  инофрмация по времени
+     */
     public String iteratorRemoveTime(Collection collection) {
         long startTime1=System.currentTimeMillis();
         Iterator<Person> iter= collection.iterator();
@@ -273,6 +398,10 @@ public class DataGeneration  {
 
     }
 
+    /**
+     * метод для сортировки  Collections.sort
+     * @return  инофрмация по времени
+     */
 
     public String  sort1( List list, Comparator comparator) {
         long startTime1=System.currentTimeMillis();
@@ -284,6 +413,10 @@ public class DataGeneration  {
 
     }
 
+    /**
+     * метод для сортировки  по нескольким параметрам для Animal
+     * @return  инофрмация по времени
+     */
     public String  sort2 (Collection collection) {
 
         long startTime1=System.currentTimeMillis();
@@ -294,6 +427,11 @@ public class DataGeneration  {
 
         return "Операция:  sort2. Заняла" + Long.toString(resultTime1) +"мс";
     }
+
+    /**
+     * метод для сортировки  по нескольким параметрам для Person
+     * @return  инофрмация по времени
+     */
 
     public String  sort3(Collection collection) {
 
