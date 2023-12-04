@@ -7,7 +7,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DataContainerTest {
+public class
+DataContainerTest {
 
     DataContainer <Integer> dtInt = new DataContainer<>();
     DataContainer <String> dtStr = new DataContainer<>();
