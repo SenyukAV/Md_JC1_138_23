@@ -1,4 +1,4 @@
-package homeWork6;
+package homeWork_6;
 
 import home_work_6.EasySearch;
 import org.junit.jupiter.api.DisplayName;
